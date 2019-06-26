@@ -1,0 +1,43 @@
+{
+    "name": "Rapport",
+    "fields": [
+        {
+            "fieldName": "month",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "meteo",
+            "javadoc": "good, ok, bad",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "resume",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "projet",
+            "otherEntityName": "projet",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "personne",
+            "otherEntityRelationshipName": "rapport",
+            "relationshipName": "redacteur",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190626132939",
+    "entityTableName": "rapport",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

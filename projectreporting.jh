@@ -1,0 +1,29 @@
+
+entity Projet {
+	name String
+    // Other attribute will probably come...
+}
+
+entity Rapport {
+	month String
+    meteo String /** good, ok, bad */
+    resume String
+}
+
+/**
+ * Personne entity. Can be a client or a project leader
+ * @author sbiou
+ */
+entity Personne {
+	name String
+}
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Projet{rapport} to Rapport, // les rapports relatifs au projet
+    Personne{responsableDe} to Projet, // les projets sur laquelle travaille la personne
+}
+
+relationship OneToOne {
+	Rapport{redacteur} to Personne
+}
