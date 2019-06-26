@@ -1,0 +1,32 @@
+{
+    "name": "Projet",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "rapport",
+            "otherEntityRelationshipName": "projet",
+            "relationshipName": "rapport"
+        },
+        {
+            "relationshipName": "personne",
+            "otherEntityName": "personne",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190626132938",
+    "entityTableName": "projet",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

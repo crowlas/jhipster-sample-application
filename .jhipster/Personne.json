@@ -1,0 +1,27 @@
+{
+    "name": "Personne",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "projet",
+            "otherEntityRelationshipName": "personne",
+            "relationshipName": "responsableDe"
+        }
+    ],
+    "changelogDate": "20190626132940",
+    "javadoc": "Personne entity. Can be a client or a project leader\n@author sbiou",
+    "entityTableName": "personne",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}
